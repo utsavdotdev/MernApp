@@ -21,7 +21,7 @@ function Forms() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3001/emp",
+        "https://mernbackendutsav.herokuapp.com/emp",
         {
           empName: name,
           empEmail: email,
@@ -52,73 +52,73 @@ function Forms() {
 
   return (
     <div className="main_div">
-        <h1 className="font-weight-normal">
-          <u>Registration Form</u>
-        </h1>
-        <form className="register-form" onSubmit={sendData} autoComplete="off">
-          <div className="form-group">
-            <label>Username:</label>
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Enter username"
-              name="name"
-              onChange={handleChange}
-              value={data.name}
-            />
-          </div>
-          <div className="form-group">
-            <label>Email:</label>
-            <input
-              className="form-control"
-              type="email"
-              placeholder="Enter email"
-              name="email"
-              onChange={handleChange}
-              value={data.email}
-            />
-          </div>
-          <div className="form-group">
-            <label>Number:</label>
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Enter number"
-              name="number"
-              onChange={handleChange}
-              value={data.number}
-            />
-          </div>
-          <div className="form-group">
-            <label>Salary:</label>
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Enter salary"
-              name="salary"
-              onChange={handleChange}
-              value={data.salary}
-            />
-          </div>
-          <div className="form-group">
-            <label>Address:</label>
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Enter Address"
-              name="address"
-              onChange={handleChange}
-              value={data.address}
-            />
-          </div>
+      <h1 className="font-weight-normal">
+        <u>Registration Form</u>
+      </h1>
+      <form className="register-form" onSubmit={sendData} autoComplete="off">
+        <div className="form-group">
+          <label>Username:</label>
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Enter username"
+            name="name"
+            onChange={handleChange}
+            value={data.name}
+          />
+        </div>
+        <div className="form-group">
+          <label>Email:</label>
+          <input
+            className="form-control"
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            onChange={handleChange}
+            value={data.email}
+          />
+        </div>
+        <div className="form-group">
+          <label>Number:</label>
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Enter number"
+            name="number"
+            onChange={handleChange}
+            value={data.number}
+          />
+        </div>
+        <div className="form-group">
+          <label>Salary:</label>
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Enter salary"
+            name="salary"
+            onChange={handleChange}
+            value={data.salary}
+          />
+        </div>
+        <div className="form-group">
+          <label>Address:</label>
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Enter Address"
+            name="address"
+            onChange={handleChange}
+            value={data.address}
+          />
+        </div>
 
-          <div className="btn_box">
-            <button className="btn btn-danger my-2">Clear</button>
-            <button className="btn btn-success my-2" type="submit">
-              Register
-            </button>
-          </div>
-        </form>
+        <div className="btn_box">
+          <button className="btn btn-danger my-2">Clear</button>
+          <button className="btn btn-success my-2" type="submit">
+            Register
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

@@ -6,16 +6,18 @@ import "../css/Card.css";
 function Card() {
   const [user, setUser] = useState([]);
   useEffect(() => {
-    async function fetchData(){
-      const updateRes = await axios.get("http://localhost:3001/emp");
+    async function fetchData() {
+      const updateRes = await axios.get(
+        "https://mernbackendutsav.herokuapp.com/emp"
+      );
       setUser(updateRes.data);
     }
     fetchData();
-  }, [user]);
+  }, []);
 
   const deleteUser = async (id) => {
     try {
-     await axios.delete(`http://localhost:3001/emp/${id}`);
+      await axios.delete(`https://mernbackendutsav.herokuapp.com/${id}`);
     } catch (e) {
       console.log(e);
     }
