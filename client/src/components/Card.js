@@ -5,14 +5,17 @@ import "../css/Card.css";
 
 function Card() {
   const [user, setUser] = useState([]);
-  useEffect(async () => {
-    const updateRes = await axios.get("http://localhost:3001/emp");
-    setUser(updateRes.data);
+  useEffect(() => {
+    async function fetchData(){
+      const updateRes = await axios.get("http://localhost:3001/emp");
+      setUser(updateRes.data);
+    }
+    fetchData();
   }, [user]);
 
   const deleteUser = async (id) => {
     try {
-      const deleteRes = await axios.delete(`http://localhost:3001/emp/${id}`);
+     await axios.delete(`http://localhost:3001/emp/${id}`);
     } catch (e) {
       console.log(e);
     }
