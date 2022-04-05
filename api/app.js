@@ -10,7 +10,9 @@ require("./db/conn");
 app.use(express.json({ extented: false }));
 app.use(cors());
 app.use(empRouter);
-
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 app.listen(port, () => {
   console.log(`Listening on ${port}`);
 });
