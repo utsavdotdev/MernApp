@@ -17,7 +17,7 @@ function Card() {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://mernbackendutsav.herokuapp.com/${id}`);
+      await axios.delete(`https://mernbackendutsav.herokuapp.com/emp/${id}`);
     } catch (e) {
       console.log(e);
     }
