@@ -1,4 +1,4 @@
-# mern-app
+# MernApp🔥🔥
 
 It is a simple MERN app which helps beginner to learn about:
 ->MongoDb
