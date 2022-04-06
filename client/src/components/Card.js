@@ -13,7 +13,7 @@ function Card() {
       setUser(updateRes.data);
     }
     fetchData();
-  }, []);
+  }, [user]);
 
   const deleteUser = async (id) => {
     try {

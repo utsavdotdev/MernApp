@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import '../css/Form.css'
 
 function Form() {
   const History = useNavigate();
@@ -58,9 +59,11 @@ function Form() {
     }
   }
   return (
-    <div className="py-1 mx-3">
-      <h1>Updating Form</h1>
-      <form className="register-form w-50 py-1" onSubmit={sendData}>
+    <div className="main_div">
+      <h1 className="font-weight-normal">
+        <u>Updating Form</u>
+      </h1>
+      <form className="register-form" onSubmit={sendData} autoComplete='off'>
         <div className="form-group">
           <label>Username</label>
           <input
@@ -117,9 +120,12 @@ function Form() {
           />
         </div>
 
-        <button className="btn btn-primary my-2" type="submit">
-          Update
-        </button>
+        <div className="btn_box">
+          <button className="btn btn-danger my-2">Clear</button>
+          <button className="btn btn-success my-2" type="submit">
+            Update
+          </button>
+        </div>
       </form>
     </div>
   );
